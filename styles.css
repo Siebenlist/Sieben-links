@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: yellow;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+.root {
+    margin: auto;
+    width: 850px;
+    height: auto;
+}
+
+.scroll-text {
+    overflow: hidden;
+  }
+  
+  .scroll-text > p {
+    white-space: nowrap;
+    color: white;
+
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+  
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.avatar > img{
+    width: 150px;
+}
+
+.text{
+    justify-content: flex-start;
+}
+
+.text > h1{
+    font-weight: 700;
+}
+
+.text > p{
+  text-align: center;
+}
+
+.border{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: blueviolet;
+    box-shadow: 0px 0px 10px blueviolet;
+    margin: 15px 0 0 0;
+}
+
+.links{
+  padding: 25px 0 0 0;
+}
+
+.links > h2{
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.links > ul{
+    padding: 20px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    list-style-type: none;
+}
+
+.links > ul > li> a{
+  text-decoration: none;
+}
+
+.links > ul > li> a:hover{
+  text-decoration: underline;
+}
+
+.footer{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 5px;
+}
+
+.footer > footer{
+  color: #353535;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.sus{
+  color: #353535;
+  cursor: pointer;
+}
